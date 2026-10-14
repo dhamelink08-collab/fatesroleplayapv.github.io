@@ -2,270 +2,651 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fates Roleplay | APV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="De officiële Algemene Plaatselijke Verordening van Fates Roleplay.">
+<title>APV | Fates Roleplay</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #080d18;
-      color: #f5f7fc;
-    }
-
-    header {
-      height: 76px;
-      padding: 0 8%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #0d1525;
-      border-bottom: 1px solid #23334c;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #5795ff;
-    }
-
-    nav a {
-      color: #c3cee0;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #5795ff;
-    }
-
-    .hero {
-      min-height: 440px;
-      padding: 100px 20px 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: radial-gradient(ellipse at top, #193765, #080d18 72%);
-    }
-
-    .label {
-      color: #82afff;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 4px;
-    }
-
-    h1 {
-      margin: 24px 0 16px;
-      font-size: clamp(42px, 7vw, 72px);
-      letter-spacing: -2px;
-    }
-
-    h1 span {
-      color: #5795ff;
-    }
-
-    .hero p {
-      max-width: 570px;
-      color: #aab7cc;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 15px 24px;
-      background: #3478ed;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 7px;
-    }
-
-    .button:hover {
-      background: #5795ff;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 65px 24px;
-    }
-
-    .eyebrow {
-      color: #5795ff;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    h2 {
-      margin: 12px 0;
-      font-size: 30px;
-    }
-
-    .description {
-      color: #9eacc2;
-      line-height: 1.7;
-      max-width: 650px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-      margin-top: 32px;
-    }
-
-    .card {
-      padding: 25px;
-      background: #101a2c;
-      border: 1px solid #23334c;
-      border-radius: 12px;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #5795ff;
-    }
-
-    .number {
-      color: #5795ff;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .card h3 {
-      margin: 16px 0 10px;
-    }
-
-    .card p {
-      color: #9eacc2;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    footer {
-      padding: 25px;
-      border-top: 1px solid #23334c;
-      text-align: center;
-      color: #8492a9;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 0 5%;
-      }
-
-      nav a {
-        margin-left: 10px;
-        font-size: 12px;
-      }
-
-      .logo {
-        font-size: 16px;
-      }
-
-      .hero {
-        padding: 75px 20px;
-      }
-    }
-  </style>
+<style>
+:root {
+  --bg: #080d18;
+  --panel: #0e1728;
+  --panel2: #121f34;
+  --line: #22334c;
+  --blue: #5795ff;
+  --text: #f4f7fc;
+  --muted: #98a9c2;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Arial, sans-serif;
+  font-size: 14px;
+}
+a { color: inherit; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.topbar {
+  height: 76px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 6%;
+  background: rgba(8,13,24,.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 850;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border: 1px solid #3b69a9;
+  border-radius: 11px;
+  background: linear-gradient(145deg,#1b3f70,#101b30);
+  color: #9bc2ff;
+  font-size: 19px;
+}
+.brand span { color: var(--blue); }
+.top-actions { display: flex; align-items: center; gap: 12px; }
+.discord {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 17px;
+  border-radius: 8px;
+  background: #3478ed;
+  color: white;
+  text-decoration: none;
+  font-weight: 750;
+  transition: .2s;
+}
+.discord:hover { background: #5795ff; transform: translateY(-1px); }
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 86px 20px 76px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% -10%,rgba(44,104,190,.38),transparent 65%),
+    linear-gradient(180deg,#0b1425,var(--bg));
+  border-bottom: 1px solid var(--line);
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .15;
+  background-image: linear-gradient(rgba(100,150,220,.12) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(100,150,220,.12) 1px,transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom,black,transparent);
+}
+.hero-content { position: relative; max-width: 780px; margin: auto; }
+.eyebrow {
+  color: #8bb6ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.hero h1 {
+  margin: 21px 0 17px;
+  font-size: clamp(38px,7vw,69px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+}
+.hero h1 span { color: var(--blue); }
+.hero p {
+  max-width: 610px;
+  margin: 0 auto;
+  color: #a9b8cd;
+  line-height: 1.9;
+  font-size: 15px;
+}
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 17px;
+  border: 1px solid #2c4263;
+  border-radius: 8px;
+  background: #101c30;
+  color: #e1eafa;
+  text-decoration: none;
+  font-weight: 700;
+}
+.secondary:hover { border-color: var(--blue); }
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.stat { color: var(--muted); font-size: 12px; }
+.stat strong {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 21px;
+}
+.layout {
+  max-width: 1400px;
+  margin: auto;
+  padding: 36px 5% 80px;
+  display: grid;
+  grid-template-columns: 255px minmax(0,1fr);
+  align-items: start;
+  gap: 27px;
+}
+.sidebar {
+  position: sticky;
+  top: 96px;
+  padding: 17px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+}
+.side-label {
+  padding: 4px 9px 13px;
+  color: #7589a6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 10px;
+  margin-bottom: 4px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #b7c5d9;
+  text-align: left;
+  font-size: 12px;
+  transition: .15s;
+}
+.nav-item:hover { background: #14233a; color: white; }
+.nav-item.active {
+  background: #162b49;
+  border-color: #294b79;
+  color: white;
+}
+.nav-icon {
+  width: 23px;
+  color: #81b0ff;
+  text-align: center;
+  font-size: 15px;
+}
+.side-discord {
+  display: block;
+  margin-top: 16px;
+  padding: 15px;
+  background: #111f34;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+.side-discord strong { display: block; margin-bottom: 7px; }
+.side-discord p { margin: 0 0 13px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.side-discord .discord { width: 100%; padding: 10px; font-size: 12px; }
+.content { min-width: 0; }
+.content-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin: 3px 0 22px;
+}
+.content-head h2 { margin: 7px 0 0; font-size: 27px; }
+.content-head p { margin: 9px 0 0; color: var(--muted); line-height: 1.7; }
+.search-wrap { position: relative; width: min(100%,300px); }
+.search-wrap span {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7e93b1;
+  font-size: 17px;
+}
+#search {
+  width: 100%;
+  padding: 13px 13px 13px 39px;
+  outline: none;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--panel);
+  color: white;
+}
+#search:focus { border-color: var(--blue); }
+#search::placeholder { color: #71829c; }
+.notice {
+  padding: 15px 17px;
+  margin-bottom: 20px;
+  border: 1px solid #284c79;
+  border-radius: 9px;
+  background: rgba(41,91,154,.12);
+  color: #b9cce7;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.notice strong { color: #e3edff; }
+.rules { display: grid; gap: 12px; }
+.rule {
+  padding: 20px 21px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: linear-gradient(120deg,#101a2b,#0c1422);
+  transition: border-color .2s;
+}
+.rule:hover { border-color: #355887; }
+.rule-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.article-number {
+  color: #83b1ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.rule-tag {
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #182944;
+  color: #a9caff;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.rule h3 { margin: 0 0 9px; font-size: 15px; }
+.rule p { margin: 0; color: #a8b7cc; line-height: 1.85; font-size: 13px; }
+.rule p + p { margin-top: 8px; }
+.empty {
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed #2c3d56;
+  border-radius: 12px;
+}
+footer {
+  padding: 28px 6%;
+  border-top: 1px solid var(--line);
+  background: #090f1b;
+  color: #8091aa;
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+}
+footer strong { color: #dce7f7; }
+footer a { color: #82afff; text-decoration: none; }
+@media(max-width:850px) {
+  .layout { grid-template-columns: 1fr; padding: 25px 4% 55px; }
+  .sidebar { position: static; }
+  .nav-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 3px; }
+  .side-discord { display: none; }
+}
+@media(max-width:520px) {
+  .topbar { height: 65px; padding: 0 4%; }
+  .brand { font-size: 13px; gap: 8px; }
+  .brand-icon { width: 32px; height: 32px; }
+  .top-actions .discord { padding: 10px; font-size: 11px; }
+  .hero { padding: 65px 18px 52px; }
+  .hero h1 { letter-spacing: -1.5px; }
+  .stats { gap: 23px; }
+  .nav-list { grid-template-columns: 1fr 1fr; }
+  .nav-item { padding: 10px 7px; font-size: 10px; gap: 6px; }
+  .content-head { align-items: stretch; }
+  .search-wrap { width: 100%; }
+  .rule { padding: 17px; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="logo">FATES <span>ROLEPLAY</span></div>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Fates Roleplay home">
+    <div class="brand-icon">F</div>
+    <div>FATES <span>ROLEPLAY</span></div>
+  </a>
+  <div class="top-actions">
+    <a class="discord" href="https://discord.gg/mVpVveqf97" target="_blank" rel="noopener noreferrer">
+      ♧ Join Discord ↗
+    </a>
+  </div>
+</header>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#apv">APV</a>
-    </nav>
-  </header>
-
-  <section class="hero" id="home">
-    <div class="label">OFFICIËLE REGELGEVING</div>
-
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Officiële serverregelgeving</div>
     <h1>FATES ROLEPLAY<br><span>APV</span></h1>
-
     <p>
-      Welkom bij de Algemene Plaatselijke Verordening
-      van Fates Roleplay. Lees onze regelgeving zorgvuldig
-      door en zorg ervoor dat je op de hoogte bent van
-      de afspraken binnen onze stad.
+      Welkom bij de Algemene Plaatselijke Verordening van Fates Roleplay.
+      Hier vind je de basisregels en afspraken die bijdragen aan een
+      eerlijke, respectvolle en realistische roleplay-ervaring.
     </p>
-
-    <a class="button" href="#apv">Bekijk de APV</a>
-  </section>
-
-  <main id="apv">
-    <div class="eyebrow">REGELGEVING</div>
-    <h2>De APV</h2>
-
-    <p class="description">
-      Selecteer hieronder een categorie om te zien waar de
-      regelgeving over gaat. De onderstaande categorieën
-      zijn een startopzet; de definitieve regels moeten nog
-      worden toegevoegd.
-    </p>
-
-    <div class="grid">
-      <article class="card">
-        <div class="number">HOOFDSTUK 01</div>
-        <h3>Algemene regels</h3>
-        <p>Algemene afspraken en gedragsregels binnen Fates Roleplay.</p>
-      </article>
-
-      <article class="card">
-        <div class="number">HOOFDSTUK 02</div>
-        <h3>Roleplay regels</h3>
-        <p>Regels voor realistische en eerlijke roleplay-situaties.</p>
-      </article>
-
-      <article class="card">
-        <div class="number">HOOFDSTUK 03</div>
-        <h3>Verkeersregels</h3>
-        <p>Regelgeving voor voertuigen en verkeerssituaties.</p>
-      </article>
-
-      <article class="card">
-        <div class="number">HOOFDSTUK 04</div>
-        <h3>Criminaliteit</h3>
-        <p>Afspraken over criminele activiteiten en overvallen.</p>
-      </article>
-
-      <article class="card">
-        <div class="number">HOOFDSTUK 05</div>
-        <h3>Overheidsdiensten</h3>
-        <p>Regels voor politie, ambulance en andere overheidsdiensten.</p>
-      </article>
-
-      <article class="card">
-        <div class="number">HOOFDSTUK 06</div>
-        <h3>Sancties</h3>
-        <p>Mogelijke straffen bij het overtreden van de regelgeving.</p>
-      </article>
+    <div class="hero-actions">
+      <a class="discord" href="#regels">📖 Bekijk de regelgeving ↓</a>
+      <a class="secondary" href="https://discord.gg/mVpVveqf97" target="_blank" rel="noopener noreferrer">Discord server ↗</a>
     </div>
-  </main>
+    <div class="stats">
+      <div class="stat"><strong id="category-count">10</strong>Hoofdstukken</div>
+      <div class="stat"><strong id="article-count">—</strong>Artikelen</div>
+      <div class="stat"><strong>24/7</strong>Online raadpleegbaar</div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    Fates Roleplay · APV · Alle rechten voorbehouden
-  </footer>
+<main class="layout" id="regels">
+  <aside class="sidebar">
+    <div class="side-label">INHOUDSOPGAVE</div>
+    <div class="nav-list" id="navigation"></div>
+    <div class="side-discord">
+      <strong>Vragen over de APV?</strong>
+      <p>Kom naar onze Discord voor informatie en ondersteuning.</p>
+      <a class="discord" href="https://discord.gg/mVpVveqf97" target="_blank" rel="noopener noreferrer">Naar Discord ↗</a>
+    </div>
+  </aside>
+
+  <section class="content">
+    <div class="content-head">
+      <div>
+        <div class="eyebrow">FATES ROLEPLAY / REGELS</div>
+        <h2 id="section-title">Algemene bepalingen</h2>
+        <p id="section-description">De basis van onze stad en community.</p>
+      </div>
+      <label class="search-wrap">
+        <span>⌕</span>
+        <input id="search" type="search" placeholder="Zoek een regel..." autocomplete="off" aria-label="Zoek in de APV">
+      </label>
+    </div>
+
+    <div class="notice">
+      <strong>Belangrijk om te weten</strong><br>
+      Deze APV is een basisdocument. Controleer altijd de meest recente
+      regelgeving en aanvullende afspraken van Fates Roleplay.
+      Bij twijfel vraag je verduidelijking aan het staffteam.
+    </div>
+
+    <div class="rules" id="rules-list" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <strong>FATES ROLEPLAY</strong> · Algemene Plaatselijke Verordening<br>
+  Respecteer elkaar. Speel eerlijk. Maak samen mooie roleplay.<br>
+  <a href="https://discord.gg/mVpVveqf97" target="_blank" rel="noopener noreferrer">Bezoek onze Discord ↗</a>
+</footer>
+
+<script>
+const chapters = [
+{
+ title:"Algemene bepalingen", icon:"§",
+ description:"De basisregels, begrippen en verantwoordelijkheden van iedere speler.",
+ rules:[
+ ["1.1","Toepasselijkheid","Iedere speler die deelneemt aan Fates Roleplay wordt geacht de geldende regels te kennen en na te leven."],
+ ["1.2","Verantwoordelijkheid","Iedere speler is verantwoordelijk voor het eigen gedrag, de eigen account en de handelingen van het eigen personage."],
+ ["1.3","Aanwijzingen van staff","Redelijke aanwijzingen van bevoegd staff dienen tijdens een lopende situatie opgevolgd te worden. Vragen of bezwaar kunnen achteraf via de daarvoor bedoelde kanalen worden besproken."],
+ ["1.4","Respect","Behandel andere spelers en medewerkers met respect. Bedreiging, intimidatie, discriminatie en doelbewuste persoonlijke aanvallen zijn niet toegestaan."],
+ ["1.5","Realistisch gedrag","Handelingen dienen passend te zijn binnen de roleplay-situatie. Houd rekening met de gevolgen en de veiligheid van je personage."],
+ ["1.6","Eigen verantwoordelijkheid","Onbekendheid met de regels is op zichzelf geen vrijstelling van de geldende regels."],
+ ["1.7","Gebruik van accounts","Het bewust delen, misbruiken of gebruiken van accounts om regels te omzeilen is niet toegestaan."],
+ ["1.8","Wijzigingen","De APV kan worden bijgewerkt. Spelers zijn zelf verantwoordelijk voor het raadplegen van de actuele versie."]
+ ]},
+{
+ title:"Roleplay-regels", icon:"◈",
+ description:"Regels voor eerlijke, geloofwaardige en kwalitatieve roleplay.",
+ rules:[
+ ["2.1","FailRP","FailRP is gedrag dat de geloofwaardigheid van de roleplay ernstig verstoort of onrealistisch is binnen de situatie."],
+ ["2.2","Metagaming","Informatie die je buiten de roleplay hebt verkregen, mag je niet gebruiken voor beslissingen van je personage wanneer dat personage die informatie niet kan kennen."],
+ ["2.3","Powergaming","Je mag geen onredelijke acties afdwingen, onmogelijke handelingen uitvoeren of anderen de kans ontnemen om passend op een situatie te reageren."],
+ ["2.4","Random Deathmatch (RDM)","Het zonder geldige roleplay-aanleiding aanvallen of doden van een andere speler is niet toegestaan."],
+ ["2.5","Vehicle Deathmatch (VDM)","Een voertuig bewust als wapen gebruiken om spelers zonder passende roleplay-aanleiding aan te rijden is niet toegestaan."],
+ ["2.6","New Life Rule","Na een definitieve dood volgens de servermechanieken volg je de geldende NLR-afspraken. Informatie en conflicten uit het vorige leven mogen niet zomaar worden meegenomen."],
+ ["2.7","Value of Life","Je personage dient gevaar serieus te nemen. Handel niet alsof je personage onkwetsbaar is wanneer de situatie duidelijk levensbedreigend is."],
+ ["2.8","Fail Driving","Voertuigen moeten op een geloofwaardige manier worden gebruikt. Onmogelijke sprongen, roekeloos misbruik van terrein en onrealistisch rijgedrag kunnen als FailRP gelden."],
+ ["2.9","Combat logging","Het verlaten van de server om een roleplay-situatie, arrestatie, confrontatie of mogelijke consequentie te ontlopen is niet toegestaan."],
+ ["2.10","Scenario's uitspelen","Geef andere betrokken spelers een redelijke mogelijkheid om op acties te reageren en een scenario op een passende manier af te ronden."],
+ ["2.11","Character knowledge","Je personage mag alleen kennis gebruiken die het binnen de roleplay op geloofwaardige wijze heeft verkregen."],
+ ["2.12","Overname van situaties","Het zonder passende aanleiding verstoren of overnemen van andermans scenario is niet toegestaan."]
+ ]},
+{
+ title:"Gedrag & communicatie", icon:"◉",
+ description:"Respectvolle communicatie en veilig gedrag binnen de community.",
+ rules:[
+ ["3.1","Respectvolle omgang","Schelden met als doel iemand persoonlijk te intimideren, discrimineren of lastig te vallen is niet toegestaan."],
+ ["3.2","Discriminatie","Racisme, discriminatie en haatdragend gedrag worden niet geaccepteerd."],
+ ["3.3","Voicechat","Gebruik verstaanbare communicatie en verstoor gesprekken of lopende scenario's niet opzettelijk."],
+ ["3.4","Spam","Het herhaaldelijk spammen van voicechat, tekstkanalen of meldingen is niet toegestaan."],
+ ["3.5","Bedreiging en intimidatie","Dreigen met doxing, geweld buiten het spel of het verspreiden van privégegevens is verboden."],
+ ["3.6","Exploits en bugs","Misbruik van fouten, exploits of onbedoelde spelmechanieken is niet toegestaan. Meld ontdekte problemen bij staff."],
+ ["3.7","Cheats en externe hulpmiddelen","Cheats of hulpmiddelen die oneerlijk voordeel geven of de werking van de server manipuleren zijn niet toegestaan."],
+ ["3.8","Privégegevens","Deel geen persoonlijke of vertrouwelijke gegevens van anderen zonder toestemming."],
+ ["3.9","Opnames en bewijs","Bewijsmateriaal moet authentiek en relevant zijn. Manipuleer geen bewijs om iemand bewust te benadelen."],
+ ["3.10","Reclame","Ongevraagde reclame of het werven van spelers voor andere communities via daarvoor niet bedoelde kanalen is niet toegestaan."]
+ ]},
+{
+ title:"Verkeer & voertuigen", icon:"⌁",
+ description:"Verantwoord voertuiggebruik en geloofwaardig verkeersgedrag.",
+ rules:[
+ ["4.1","Verkeersgedrag","Gedraag je op de weg passend bij de situatie. Houd rekening met andere weggebruikers en de geloofwaardigheid van het scenario."],
+ ["4.2","Voertuiggebruik","Gebruik voertuigen waarvoor ze bedoeld zijn en vermijd handelingen die in de situatie duidelijk onmogelijk of onrealistisch zijn."],
+ ["4.3","Voertuig als wapen","Een voertuig bewust gebruiken om iemand zonder passende aanleiding aan te rijden valt onder VDM."],
+ ["4.4","Voertuigschade","Reageer op ernstige botsingen en schade op een manier die past bij de situatie en de staat van je voertuig."],
+ ["4.5","Hulpdiensten","Maak op een veilige en geloofwaardige manier ruimte voor hulpdiensten wanneer de situatie dat vereist."],
+ ["4.6","Voertuigmisbruik","Het misbruiken van voertuigen, garages of voertuigmechanieken om oneerlijk voordeel te verkrijgen is niet toegestaan."],
+ ["4.7","Parkeren","Parkeer voertuigen op een passende manier en blokkeer niet opzettelijk belangrijke doorgangen of scenario's."]
+ ]},
+{
+ title:"Criminaliteit", icon:"◆",
+ description:"Afspraken voor geloofwaardige criminele roleplay en conflicten.",
+ rules:[
+ ["5.1","Criminele aanleiding","Criminele acties moeten passen binnen de roleplay en de geldende serverregels. Het zonder aanleiding lastigvallen van anderen is niet toegestaan."],
+ ["5.2","Overvallen","Bij overvallen moeten de specifieke serverregels voor de betreffende locatie, voorbereiding en betrokken partijen worden gevolgd."],
+ ["5.3","Gijzelingen","Gijzelingen moeten geloofwaardig worden uitgespeeld. Behandel betrokkenen als onderdeel van een scenario en houd rekening met de geldende serverlimieten."],
+ ["5.4","Escalatie","Laat conflicten op een geloofwaardige manier ontstaan. Escaleer niet uitsluitend om een gevecht of schietpartij af te dwingen."],
+ ["5.5","Criminele samenwerking","Samenwerken met andere spelers mag alleen binnen de geldende regels voor groepen, bondgenootschappen en scenario's."],
+ ["5.6","Ontvoering","Ontvoeringen moeten een passende roleplay-aanleiding hebben en voldoen aan de specifieke serverregels."],
+ ["5.7","Afhandeling van conflicten","Geef betrokken spelers redelijke gelegenheid om te reageren en volg de geldende regels voor het beëindigen van een conflict."],
+ ["5.8","Misbruik van veilige locaties","Een veilige locatie gebruiken om een lopend scenario op oneerlijke wijze te ontlopen is niet toegestaan."]
+ ]},
+{
+ title:"Overheidsdiensten", icon:"⬡",
+ description:"Professioneel en geloofwaardig handelen voor publieke diensten.",
+ rules:[
+ ["6.1","Professioneel gedrag","Medewerkers van overheidsdiensten dienen hun functie op een geloofwaardige en respectvolle manier uit te oefenen."],
+ ["6.2","Bevoegdheden","Gebruik alleen bevoegdheden die bij de functie, rang en situatie passen."],
+ ["6.3","Misbruik van functie","Het gebruiken van een overheidsfunctie, uitrusting of informatie voor oneerlijk persoonlijk voordeel is niet toegestaan."],
+ ["6.4","Politieoptreden","Politieoptreden dient passend te zijn bij de aanleiding en de omstandigheden van de situatie."],
+ ["6.5","Medische roleplay","Medische handelingen en hulpverlening moeten geloofwaardig worden uitgespeeld en passen bij de situatie."],
+ ["6.6","Vertrouwelijke informatie","Gebruik of verspreid vertrouwelijke overheidsinformatie niet voor persoonlijk voordeel of buiten de toegestane roleplay."],
+ ["6.7","Samenwerking","Overheidsdiensten dienen onderling samen te werken volgens de geldende procedures en functieafspraken."],
+ ["6.8","Dienstuitrusting","Misbruik of ongeoorloofd gebruik van dienstvoertuigen, wapens, uniformen of andere dienstmiddelen is niet toegestaan."]
+ ]},
+{
+ title:"Veilige zones", icon:"⬢",
+ description:"Afspraken voor aangewezen veilige locaties en openbare ruimtes.",
+ rules:[
+ ["7.1","Aangewezen locaties","Locaties die door Fates Roleplay als veilig zijn aangewezen, vallen onder de daarvoor gepubliceerde regels."],
+ ["7.2","Geen uitlokking","Het bewust uitlokken van geweld of criminaliteit in een veilige zone is niet toegestaan."],
+ ["7.3","Misbruik voorkomen","Gebruik veilige zones niet om lopende scenario's op oneerlijke wijze te ontwijken of om misbruik te maken van bescherming."],
+ ["7.4","Locatiespecifieke regels","Aanvullende regels voor specifieke locaties kunnen door de server worden vastgesteld en moeten worden nageleefd."],
+ ["7.5","Overgang van situaties","Bij situaties aan de grens van een veilige zone dient het scenario volgens de geldende serverregels te worden afgehandeld."]
+ ]},
+{
+ title:"Wapens & geweld", icon:"✦",
+ description:"Verantwoord en geloofwaardig omgaan met geweld binnen roleplay.",
+ rules:[
+ ["8.1","Aanleiding voor geweld","Geweld moet passen binnen de roleplay-situatie en mag niet uitsluitend worden gebruikt om andere spelers te hinderen."],
+ ["8.2","Dreiging","Bedreigingen en confrontaties dienen geloofwaardig te worden uitgespeeld. Geef betrokken spelers een redelijke mogelijkheid te reageren."],
+ ["8.3","Wapenmisbruik","Het misbruiken van wapenmechanieken of het bewust verstoren van scenario's met wapens is niet toegestaan."],
+ ["8.4","Letsel en gevolgen","Houd rekening met letsel, dreiging en de gevolgen van geweld bij het verder uitspelen van een scenario."],
+ ["8.5","Escalatie beperken","Voorkom onnodige escalatie wanneer de situatie geloofwaardig op een andere manier kan worden afgehandeld."],
+ ["8.6","Serverbeperkingen","Eventuele beperkingen voor wapens, aantallen deelnemers en specifieke scenario's moeten worden gevolgd."]
+ ]},
+{
+ title:"Sancties & staff", icon:"⚖",
+ description:"Meldingen, bewijs, beoordeling en mogelijke maatregelen.",
+ rules:[
+ ["9.1","Meldingen","Vermoedelijke overtredingen kunnen via de officiële kanalen van Fates Roleplay bij staff worden gemeld."],
+ ["9.2","Bewijsmateriaal","Lever waar mogelijk volledige, relevante en onbewerkte informatie aan zodat een melding eerlijk kan worden beoordeeld."],
+ ["9.3","Onderzoek","Staff kan betrokken spelers om uitleg of aanvullende informatie vragen om de situatie te beoordelen."],
+ ["9.4","Maatregelen","Afhankelijk van de ernst, omstandigheden, herhaling en beschikbare informatie kunnen maatregelen worden opgelegd volgens het geldende serverbeleid."],
+ ["9.5","Bezwaar","Een speler kan via de aangewezen procedure om herbeoordeling vragen. Blijf daarbij respectvol en lever relevante informatie aan."],
+ ["9.6","Misbruik van meldingen","Bewust valse meldingen, vervalst bewijs of het opzettelijk misleiden van staff kunnen gevolgen hebben."],
+ ["9.7","Staffbeslissingen","Volg redelijke aanwijzingen tijdens een lopende situatie. Bespreek onenigheid achteraf via de daarvoor bedoelde procedure."],
+ ["9.8","Geen vaste strafgarantie","De passende maatregel hangt af van het actuele serverbeleid en de omstandigheden. Deze basis-APV legt geen officiële strafduur of automatische straf vast."]
+ ]},
+{
+ title:"Slotbepalingen", icon:"✧",
+ description:"Aanvullende afspraken en het zorgvuldig toepassen van de APV.",
+ rules:[
+ ["10.1","Aanvullende regelgeving","Naast deze APV kunnen afzonderlijke beleidsregels gelden, bijvoorbeeld voor specifieke banen, evenementen, groepen of functies."],
+ ["10.2","Interpretatie","Wanneer een regel onduidelijk is, kan staff om verduidelijking worden gevraagd. Interpretaties dienen consistent en redelijk te zijn."],
+ ["10.3","Onvoorziene situaties","Situaties die niet letterlijk in deze basis-APV zijn beschreven, worden beoordeeld op context, eerlijkheid en de geldende serverafspraken."],
+ ["10.4","Wijzigingen publiceren","Wijzigingen aan de officiële regelgeving behoren via de aangewezen kanalen bekendgemaakt te worden."],
+ ["10.5","Ingang en geldigheid","De serverleiding dient de officiële ingangsdatum en versie van de definitieve APV vast te stellen."]
+ ]}
+];
+
+const nav = document.getElementById("navigation");
+const list = document.getElementById("rules-list");
+const search = document.getElementById("search");
+const sectionTitle = document.getElementById("section-title");
+const sectionDescription = document.getElementById("section-description");
+
+let activeChapter = 0;
+
+document.getElementById("category-count").textContent = chapters.length;
+document.getElementById("article-count").textContent =
+  chapters.reduce((total, chapter) => total + chapter.rules.length, 0);
+
+function renderNavigation() {
+  nav.innerHTML = "";
+  chapters.forEach((chapter, index) => {
+    const button = document.createElement("button");
+    button.className = "nav-item" + (index === activeChapter ? " active" : "");
+    button.innerHTML =
+      '<span class="nav-icon">' + chapter.icon + '</span>' +
+      '<span>' + chapter.title + '</span>';
+    button.type = "button";
+    button.addEventListener("click", () => {
+      activeChapter = index;
+      search.value = "";
+      renderNavigation();
+      renderRules();
+      if (window.innerWidth <= 850) {
+        document.querySelector(".content").scrollIntoView({behavior:"smooth"});
+      }
+    });
+    nav.appendChild(button);
+  });
+}
+
+function renderRules() {
+  const query = search.value.trim().toLocaleLowerCase("nl");
+  const chaptersToShow = query
+    ? chapters.map((chapter, index) => ({chapter, index}))
+    : [{chapter: chapters[activeChapter], index: activeChapter}];
+
+  list.innerHTML = "";
+  let count = 0;
+
+  chaptersToShow.forEach(({chapter, index}) => {
+    const matching = chapter.rules.filter(rule =>
+      rule.join(" ").toLocaleLowerCase("nl").includes(query)
+    );
+    if (!matching.length) return;
+
+    if (query) {
+      const heading = document.createElement("div");
+      heading.className = "eyebrow";
+      heading.style.margin = "12px 0 2px";
+      heading.textContent = chapter.title;
+      list.appendChild(heading);
+    }
+
+    matching.forEach(rule => {
+      count++;
+      const article = document.createElement("article");
+      article.className = "rule";
+
+      const top = document.createElement("div");
+      top.className = "rule-top";
+
+      const number = document.createElement("span");
+      number.className = "article-number";
+      number.textContent = "ARTIKEL " + rule[0];
+
+      const tag = document.createElement("span");
+      tag.className = "rule-tag";
+      tag.textContent = query ? chapter.title : "APV";
+
+      const title = document.createElement("h3");
+      title.textContent = rule[1];
+
+      const paragraph = document.createElement("p");
+      paragraph.textContent = rule[2];
+
+      top.append(number, tag);
+      article.append(top, title, paragraph);
+      list.appendChild(article);
+    });
+  });
+
+  if (count === 0) {
+    const empty = document.createElement("div");
+    empty.className = "empty";
+    empty.textContent = "Geen artikelen gevonden. Probeer een andere zoekterm.";
+    list.appendChild(empty);
+  }
+
+  if (!query) {
+    sectionTitle.textContent = chapters[activeChapter].title;
+    sectionDescription.textContent = chapters[activeChapter].description;
+  } else {
+    sectionTitle.textContent = "Zoekresultaten";
+    sectionDescription.textContent =
+      count + (count === 1 ? " artikel gevonden." : " artikelen gevonden.");
+  }
+}
+
+search.addEventListener("input", renderRules);
+renderNavigation();
+renderRules();
+</script>
 </body>
 </html>
