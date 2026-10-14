@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fates Roleplay | APV</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080d18;
+      color: #f5f7fc;
+    }
+
+    header {
+      height: 76px;
+      padding: 0 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0d1525;
+      border-bottom: 1px solid #23334c;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #5795ff;
+    }
+
+    nav a {
+      color: #c3cee0;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #5795ff;
+    }
+
+    .hero {
+      min-height: 440px;
+      padding: 100px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #193765, #080d18 72%);
+    }
+
+    .label {
+      color: #82afff;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      margin: 24px 0 16px;
+      font-size: clamp(42px, 7vw, 72px);
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: #5795ff;
+    }
+
+    .hero p {
+      max-width: 570px;
+      color: #aab7cc;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      background: #3478ed;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 7px;
+    }
+
+    .button:hover {
+      background: #5795ff;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 24px;
+    }
+
+    .eyebrow {
+      color: #5795ff;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      margin: 12px 0;
+      font-size: 30px;
+    }
+
+    .description {
+      color: #9eacc2;
+      line-height: 1.7;
+      max-width: 650px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .card {
+      padding: 25px;
+      background: #101a2c;
+      border: 1px solid #23334c;
+      border-radius: 12px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #5795ff;
+    }
+
+    .number {
+      color: #5795ff;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .card h3 {
+      margin: 16px 0 10px;
+    }
+
+    .card p {
+      color: #9eacc2;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 25px;
+      border-top: 1px solid #23334c;
+      text-align: center;
+      color: #8492a9;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 0 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 75px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">FATES <span>ROLEPLAY</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#apv">APV</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="label">OFFICIËLE REGELGEVING</div>
+
+    <h1>FATES ROLEPLAY<br><span>APV</span></h1>
+
+    <p>
+      Welkom bij de Algemene Plaatselijke Verordening
+      van Fates Roleplay. Lees onze regelgeving zorgvuldig
+      door en zorg ervoor dat je op de hoogte bent van
+      de afspraken binnen onze stad.
+    </p>
+
+    <a class="button" href="#apv">Bekijk de APV</a>
+  </section>
+
+  <main id="apv">
+    <div class="eyebrow">REGELGEVING</div>
+    <h2>De APV</h2>
+
+    <p class="description">
+      Selecteer hieronder een categorie om te zien waar de
+      regelgeving over gaat. De onderstaande categorieën
+      zijn een startopzet; de definitieve regels moeten nog
+      worden toegevoegd.
+    </p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="number">HOOFDSTUK 01</div>
+        <h3>Algemene regels</h3>
+        <p>Algemene afspraken en gedragsregels binnen Fates Roleplay.</p>
+      </article>
+
+      <article class="card">
+        <div class="number">HOOFDSTUK 02</div>
+        <h3>Roleplay regels</h3>
+        <p>Regels voor realistische en eerlijke roleplay-situaties.</p>
+      </article>
+
+      <article class="card">
+        <div class="number">HOOFDSTUK 03</div>
+        <h3>Verkeersregels</h3>
+        <p>Regelgeving voor voertuigen en verkeerssituaties.</p>
+      </article>
+
+      <article class="card">
+        <div class="number">HOOFDSTUK 04</div>
+        <h3>Criminaliteit</h3>
+        <p>Afspraken over criminele activiteiten en overvallen.</p>
+      </article>
+
+      <article class="card">
+        <div class="number">HOOFDSTUK 05</div>
+        <h3>Overheidsdiensten</h3>
+        <p>Regels voor politie, ambulance en andere overheidsdiensten.</p>
+      </article>
+
+      <article class="card">
+        <div class="number">HOOFDSTUK 06</div>
+        <h3>Sancties</h3>
+        <p>Mogelijke straffen bij het overtreden van de regelgeving.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    Fates Roleplay · APV · Alle rechten voorbehouden
+  </footer>
+</body>
+</html>
